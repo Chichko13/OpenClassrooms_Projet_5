@@ -16,13 +16,27 @@ const slides = [
 		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
 	}
 ]
-// Var
+
+
+// -------------------------------------------------Variables----------------------------------------------------------------
+
+
 const arrowLeft = document.querySelector(".arrow_left")
 const arrowRight = document.querySelector(".arrow_right")
 const dots = document.querySelector(".dots")
+const tagLine = document.querySelector("#banner p")
+const imgBanner = document.querySelector("#banner .banner-img")
+let currentSlide = 0
+
+
+// -------------------------------------------------EventListener----------------------------------------------------------------
+
 
 arrowLeft.addEventListener("click",clickArrowLeft)
 arrowRight.addEventListener("click",clickArrowRight)
+
+
+// -------------------------------------------------Boucle----------------------------------------------------------------
 
 for (let bullet = 0; bullet < slides.length; bullet++){
 		const dot = document.createElement("div")
@@ -33,11 +47,9 @@ for (let bullet = 0; bullet < slides.length; bullet++){
 const dotAll = document.querySelectorAll(".dot")
 dotAll[0].classList.add("dot_selected")
 
-let tagLine = document.querySelector("#banner p")
-let imgBanner = document.querySelector("#banner .banner-img")
-let currentSlide = 0
-// -------------------------------------------------FUNCTION----------------------------------------------------------------
 
+
+// -------------------------------------------------FUNCTION----------------------------------------------------------------
 
 
 function dotMove(){
