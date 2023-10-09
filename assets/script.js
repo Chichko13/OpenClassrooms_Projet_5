@@ -53,6 +53,7 @@ function clickArrowRight(){
 	if(currentSlide === slides.length){
 		currentSlide = 0
 		}
+		console.log(currentSlide)
 		imgBanner.src = slides[currentSlide].image
 		tagLine.innerHTML = slides[currentSlide].tagLine
 		dotMove()
